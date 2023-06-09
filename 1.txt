@@ -1,0 +1,6 @@
+SELECT nama AS unit_kerja FROM `data_cabang` WHERE nama LIKE '%Klaten%' OR nama LIKE '%Surakarta%'
+ORDER BY
+CASE 
+	(WHEN LIKE '%Klaten%'
+ELSE '%Surakarta%')
+END
